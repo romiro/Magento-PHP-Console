@@ -22,6 +22,8 @@
  *
  * @see lithium\util\collection\Filters
  */
+ini_set('memory_limit', '1G');
+ini_set('display_errors', 1);
 
 /**
  * The libraries file contains the loading instructions for all plugins, frameworks and other class
@@ -82,4 +84,18 @@ if (PHP_SAPI === 'cli') {
 	require __DIR__ . '/bootstrap/console.php';
 }
 
-?>
+//Define host of development environment
+use lithium\core\Environment;
+Environment::is(array(
+    'development' => array('php.dev')
+));
+
+
+//Checking for remote.flag or local IP
+if (!in_array($_SERVER['REMOTE_ADDR'], array('127.0.0.1', '::1'), true)) {
+    if(!file_exists(LITHIUM_APP_PATH . '/remote.flag')) {
+        header('HTTP/1.1 401 Access unauthorized');
+        die('ERR/401 Go Away');
+    }
+}
+

@@ -1,5 +1,5 @@
 <?php
-
+namespace Magento\TFSN;
 class Projects {
 
     protected $_directory;

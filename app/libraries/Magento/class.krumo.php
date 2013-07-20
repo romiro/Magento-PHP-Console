@@ -58,6 +58,7 @@ if (!defined('KRUMO_TRUNCATE_LENGTH')) {
 *
 * @package Krumo
 */
+namespace Magento;
 Class krumo {
 
 	/**

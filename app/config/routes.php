@@ -40,8 +40,9 @@ if ($locales = Environment::get('locales')) {
  *
  * @see app\controllers\PagesController
  */
-Router::connect('/', 'Pages::view');
+//Router::connect('/', 'Pages::view');
 
+Router::connect('/', 'Magento::cli');
 /**
  * Connect the rest of `PagesController`'s URLs. This will route URLs like `/pages/about` to
  * `PagesController`, rendering `/views/pages/about.html.php` as a static page.

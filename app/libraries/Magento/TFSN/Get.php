@@ -1,5 +1,7 @@
 <?php
 
+namespace Magento\TFSN;
+
 class Get{
 
 

@@ -24,39 +24,8 @@
     </script>
 </head>
 <body onload="prettyPrint()">
-
-	<div class="container-narrow">
-
-		<div class="masthead">
-			<ul class="nav nav-pills pull-right">
-				<li>
-					<a href="http://lithify.me/docs/manual/quickstart">Quickstart</a>
-				</li>
-				<li>
-					<a href="http://lithify.me/docs/manual">Manual</a>
-				</li>
-				<li>
-					<a href="http://lithify.me/docs/lithium">API</a>
-				</li>
-				<li>
-					<a href="http://lithify.me/">More</a>
-				</li>
-			</ul>
-			<a href="http://lithify.me/"><h3>&#10177;</h3></a>
-		</div>
-
-		<hr>
-
-		<div class="content">
-			<?php echo $this->content(); ?>
-		</div>
-
-		<hr>
-
-		<div class="footer">
-			<p>&copy; Union Of RAD 2013</p>
-		</div>
-
-	</div>
+    <div class="content">
+        <?php echo $this->content(); ?>
+    </div>
 </body>
 </html>
